@@ -29,7 +29,10 @@
 		C4214F0A17D97AD0001E640A /* UMSnsAccountViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4214EFC17D97ACF001E640A /* UMSnsAccountViewController.xib */; };
 		C4214F0B17D97AD0001E640A /* UMSShareListController.xib in Resources */ = {isa = PBXBuildFile; fileRef = C4214EFD17D97ACF001E640A /* UMSShareListController.xib */; };
 		C4214F0C17D97AD0001E640A /* UMSocialSDKResourcesNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C4214EFE17D97ACF001E640A /* UMSocialSDKResourcesNew.bundle */; };
-		C4214F1217D98282001E640A /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C4214F1417D98282001E640A /* MainStoryboard.storyboard */; };
+		C46FA18617D9A50D003EFB2F /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46FA18517D9A50D003EFB2F /* MapKit.framework */; };
+		C46FA18817D9A539003EFB2F /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46FA18717D9A539003EFB2F /* CoreLocation.framework */; };
+		C46FA18A17D9A55A003EFB2F /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C46FA18917D9A55A003EFB2F /* QuartzCore.framework */; };
+		C46FA18C17D9A936003EFB2F /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C46FA18B17D9A936003EFB2F /* MainStoryboard.storyboard */; };
 		C4BB38AC17D998F900600041 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38AB17D998F900600041 /* libGoogleAnalyticsServices.a */; };
 		C4BB38AE17D9993200600041 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38AD17D9993200600041 /* CoreData.framework */; };
 		C4BB38B017D9994F00600041 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38AF17D9994F00600041 /* SystemConfiguration.framework */; };
@@ -89,8 +92,10 @@
 		C4214EFD17D97ACF001E640A /* UMSShareListController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UMSShareListController.xib; sourceTree = "<group>"; };
 		C4214EFE17D97ACF001E640A /* UMSocialSDKResourcesNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = UMSocialSDKResourcesNew.bundle; sourceTree = "<group>"; };
 		C4214EFF17D97ACF001E640A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/UMSocialLocalizable.strings"; sourceTree = "<group>"; };
-		C4214F1317D98282001E640A /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/MainStoryboard.storyboard"; sourceTree = "<group>"; };
-		C4214F1517D9828A001E640A /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
+		C46FA18517D9A50D003EFB2F /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		C46FA18717D9A539003EFB2F /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		C46FA18917D9A55A003EFB2F /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		C46FA18B17D9A936003EFB2F /* MainStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = MainStoryboard.storyboard; sourceTree = "<group>"; };
 		C4BB38A517D998F900600041 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		C4BB38A617D998F900600041 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
 		C4BB38A717D998F900600041 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
@@ -136,6 +141,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C46FA18A17D9A55A003EFB2F /* QuartzCore.framework in Frameworks */,
+				C46FA18817D9A539003EFB2F /* CoreLocation.framework in Frameworks */,
+				C46FA18617D9A50D003EFB2F /* MapKit.framework in Frameworks */,
 				C4BB38BC17D99C2000600041 /* libxml2.2.dylib in Frameworks */,
 				C4BB38B217D9996400600041 /* libz.dylib in Frameworks */,
 				C4BB38B017D9994F00600041 /* SystemConfiguration.framework in Frameworks */,
@@ -175,6 +183,9 @@
 			children = (
 				C4BB38BB17D99C2000600041 /* libxml2.2.dylib */,
 				C4BB38B117D9996400600041 /* libz.dylib */,
+				C46FA18917D9A55A003EFB2F /* QuartzCore.framework */,
+				C46FA18717D9A539003EFB2F /* CoreLocation.framework */,
+				C46FA18517D9A50D003EFB2F /* MapKit.framework */,
 				C4BB38AF17D9994F00600041 /* SystemConfiguration.framework */,
 				C4BB38AD17D9993200600041 /* CoreData.framework */,
 				C4214EBF17D97098001E640A /* UIKit.framework */,
@@ -233,7 +244,7 @@
 				C4BB38B417D99ABA00600041 /* Common */,
 				C4214ECE17D97098001E640A /* AppDelegate.h */,
 				C4214ECF17D97098001E640A /* AppDelegate.m */,
-				C4214F1417D98282001E640A /* MainStoryboard.storyboard */,
+				C46FA18B17D9A936003EFB2F /* MainStoryboard.storyboard */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -433,8 +444,8 @@
 				C4214F0A17D97AD0001E640A /* UMSnsAccountViewController.xib in Resources */,
 				C4214F0B17D97AD0001E640A /* UMSShareListController.xib in Resources */,
 				C4214F0C17D97AD0001E640A /* UMSocialSDKResourcesNew.bundle in Resources */,
-				C4214F1217D98282001E640A /* MainStoryboard.storyboard in Resources */,
 				C4D42CFA17D99EE1009E95D0 /* SVProgressHUD.bundle in Resources */,
+				C46FA18C17D9A936003EFB2F /* MainStoryboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -479,15 +490,6 @@
 				C4214EFF17D97ACF001E640A /* zh-Hans */,
 			);
 			name = UMSocialLocalizable.strings;
-			sourceTree = "<group>";
-		};
-		C4214F1417D98282001E640A /* MainStoryboard.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				C4214F1317D98282001E640A /* zh-Hans */,
-				C4214F1517D9828A001E640A /* en */,
-			);
-			name = MainStoryboard.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
