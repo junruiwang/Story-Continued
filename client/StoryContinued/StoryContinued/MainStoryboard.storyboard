@@ -40,7 +40,7 @@
             <objects>
                 <tabBarController definesPresentationContext="YES" id="Iyp-kM-mL8" customClass="IndexViewController" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="q7Y-Gb-QmZ"/>
-                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="VeQ-2v-MLf">
                         <rect key="frame" x="129" y="330" width="163" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -51,6 +51,7 @@
                         <segue destination="Z4s-Zy-Oo3" kind="relationship" relationship="viewControllers" id="hgx-kO-tMU"/>
                         <segue destination="j86-F7-7dR" kind="relationship" relationship="viewControllers" id="ugf-aw-XfP"/>
                         <segue destination="cOM-no-9W0" kind="relationship" relationship="viewControllers" id="tzX-m1-I82"/>
+                        <segue destination="PFC-cB-MhM" kind="relationship" relationship="viewControllers" id="WfK-br-a3V"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="41f-s2-5in" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -125,6 +126,30 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KHK-AG-H0w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="419" y="1643"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="aBz-EQ-Q7e">
+            <objects>
+                <viewController id="PFC-cB-MhM" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="baU-Pk-CsQ">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="five" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="DGP-VX-q29">
+                                <rect key="frame" x="139" y="273" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" id="Fwn-hi-HYo"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WbD-Kf-lMK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="419" y="2307"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
