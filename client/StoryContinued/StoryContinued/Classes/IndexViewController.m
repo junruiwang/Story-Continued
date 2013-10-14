@@ -95,7 +95,7 @@
     [recomBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_home_os7"] forState:UIControlStateNormal];
     [recomBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_home_selected_os7"] forState:UIControlStateDisabled];
     [self.customTabView addSubview:recomBtn];
-    UILabel *recomLabel = [[UILabel alloc] initWithFrame:CGRectMake(17, 35, 30, 9)];
+    UILabel *recomLabel = [[UILabel alloc] initWithFrame:CGRectMake(17, 35, 30, 12)];
     recomLabel.tag = LABEL_TAG_INDEX;
     recomLabel.backgroundColor = [UIColor clearColor];
     recomLabel.textAlignment = NSTextAlignmentCenter;
@@ -112,7 +112,7 @@
     [newBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_message_center_os7"] forState:UIControlStateNormal];
     [newBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_message_center_selected_os7"] forState:UIControlStateDisabled];
     [self.customTabView addSubview:newBtn];
-    UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(81, 35, 30, 9)];
+    UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(81, 35, 30, 12)];
     newLabel.tag = LABEL_TAG_INDEX+1;
     newLabel.backgroundColor = [UIColor clearColor];
     newLabel.textAlignment = NSTextAlignmentCenter;
@@ -129,7 +129,7 @@
     [myBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_profile_os7"] forState:UIControlStateNormal];
     [myBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_profile_selected_os7"] forState:UIControlStateDisabled];
     [self.customTabView addSubview:myBtn];
-    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(145, 35, 30, 9)];
+    UILabel *myLabel = [[UILabel alloc] initWithFrame:CGRectMake(145, 35, 30, 12)];
     myLabel.tag = LABEL_TAG_INDEX+2;
     myLabel.backgroundColor = [UIColor clearColor];
     myLabel.textAlignment = NSTextAlignmentCenter;
@@ -146,7 +146,7 @@
     [hotBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_discover_os7"] forState:UIControlStateNormal];
     [hotBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_discover_selected_os7"] forState:UIControlStateDisabled];
     [self.customTabView addSubview:hotBtn];
-    UILabel *hotLabel = [[UILabel alloc] initWithFrame:CGRectMake(209, 35, 30, 9)];
+    UILabel *hotLabel = [[UILabel alloc] initWithFrame:CGRectMake(209, 35, 30, 12)];
     hotLabel.tag = LABEL_TAG_INDEX+3;
     hotLabel.backgroundColor = [UIColor clearColor];
     hotLabel.textAlignment = NSTextAlignmentCenter;
@@ -163,7 +163,7 @@
     [moreBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_more_os7"] forState:UIControlStateNormal];
     [moreBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_more_selected_os7"] forState:UIControlStateDisabled];
     [self.customTabView addSubview:moreBtn];
-    UILabel *moreLabel = [[UILabel alloc] initWithFrame:CGRectMake(273, 35, 30, 9)];
+    UILabel *moreLabel = [[UILabel alloc] initWithFrame:CGRectMake(273, 35, 30, 12)];
     moreLabel.tag = LABEL_TAG_INDEX+4;
     moreLabel.backgroundColor = [UIColor clearColor];
     moreLabel.textAlignment = NSTextAlignmentCenter;
