@@ -12,6 +12,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    //初始化用户信息
+    self.userInfo = [[UserInfo alloc] init];
+    
     return YES;
 }
 

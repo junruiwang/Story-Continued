@@ -27,6 +27,8 @@
 {
     [super viewDidLoad];
     self.mainWebView = [[UIWebView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    NSLog(@"%@",NSStringFromCGRect(self.mainWebView.frame));
+    
     self.mainWebView.scrollView.bounces = NO;
     self.mainWebView.scalesPageToFit = YES;
     self.mainWebView.delegate = nil;

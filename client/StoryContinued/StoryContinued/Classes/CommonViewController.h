@@ -8,7 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "Constants.h"
+#import "CommonJsonParser.h"
 
-@interface CommonViewController : UIViewController
+@interface CommonViewController : UIViewController <CommonJsonParserDelegate>
+
+- (void)downloadData;
 
 @end

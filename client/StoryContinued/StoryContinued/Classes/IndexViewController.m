@@ -31,6 +31,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.view.backgroundColor = RGBCOLOR(230, 230, 230);
     self.title = @"推荐";
     [self generateBarButton];
 	// Do any additional setup after loading the view.
