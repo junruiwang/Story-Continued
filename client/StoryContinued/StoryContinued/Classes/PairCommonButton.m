@@ -26,11 +26,12 @@
 
 - (void)loadPageContent
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(5, 5, 15, 15)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 5, 18, 18)];
     imageView.image = [UIImage imageNamed:self.imageUrl];
     [self addSubview:imageView];
     
-    UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(25,5, 30, 20)];
+    UILabel *numberLabel = [[UILabel alloc] initWithFrame:CGRectMake(22,3, 40, 20)];
+    numberLabel.textAlignment = NSTextAlignmentLeft;
     numberLabel.backgroundColor = [UIColor clearColor];
     numberLabel.font = [UIFont systemFontOfSize:14];
     numberLabel.textColor = RGBCOLOR(136, 136, 136);

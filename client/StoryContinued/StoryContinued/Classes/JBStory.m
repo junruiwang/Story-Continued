@@ -25,9 +25,9 @@
     }
     
     if (self = [super init]) {
-        self.storyId = [ValidateInputUtil valueOfObjectToString:[dict objectForKey:@"storyId"]];
+        self.storyId = [ValidateInputUtil valueOfObjectToString:[dict objectForKey:@"id"]];
         self.createTime = [ValidateInputUtil valueOfObjectToString:[dict objectForKey:@"createTime"]];
-        self.totalPartake = [[dict objectForKey:@"totalStation"] intValue];
+        self.totalPartake = [[dict objectForKey:@"totalPartake"] intValue];
         self.storyHeadContext = [ValidateInputUtil valueOfObjectToString:[dict objectForKey:@"storyHeadContext"]];
         self.totalLike = [[dict objectForKey:@"totalLike"] intValue];
         self.totalDislike = [[dict objectForKey:@"totalDislike"] intValue];

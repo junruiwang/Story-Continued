@@ -109,9 +109,11 @@
     }
     int row = [indexPath row];
     JBStory *story = [self.storyList objectAtIndex:row];
+    cell.userName.text = story.userName;
+    cell.totalMember.text = [NSString stringWithFormat:@"%d人参与接龙",story.totalPartake];
     cell.contentLabel.text = story.storyHeadContext;
-    cell.zanCount = 100;
-    cell.caiCount = 50;
+    cell.zanCount = story.totalLike;
+    cell.caiCount = story.totalDislike;
     return cell;
 }
 
