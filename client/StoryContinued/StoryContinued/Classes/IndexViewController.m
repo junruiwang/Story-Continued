@@ -93,8 +93,8 @@
     recomBtn.frame = CGRectMake(17, 5, 30, 30);
     recomBtn.enabled = NO;
     [recomBtn addTarget:self action:@selector(tabbarItemClick:) forControlEvents:UIControlEventTouchUpInside];
-    [recomBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_home_os7"] forState:UIControlStateNormal];
-    [recomBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_home_selected_os7"] forState:UIControlStateDisabled];
+    [recomBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_tuijian_os7"] forState:UIControlStateNormal];
+    [recomBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_tuijian_selected_os7"] forState:UIControlStateDisabled];
     [self.customTabView addSubview:recomBtn];
     UILabel *recomLabel = [[UILabel alloc] initWithFrame:CGRectMake(17, 35, 30, 12)];
     recomLabel.tag = LABEL_TAG_INDEX;
@@ -110,8 +110,8 @@
     newBtn.frame = CGRectMake(81, 5, 30, 30);
     newBtn.enabled = YES;
     [newBtn addTarget:self action:@selector(tabbarItemClick:) forControlEvents:UIControlEventTouchUpInside];
-    [newBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_message_center_os7"] forState:UIControlStateNormal];
-    [newBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_message_center_selected_os7"] forState:UIControlStateDisabled];
+    [newBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_last_os7"] forState:UIControlStateNormal];
+    [newBtn setBackgroundImage:[UIImage imageNamed:@"tabbar_last_selected_os7"] forState:UIControlStateDisabled];
     [self.customTabView addSubview:newBtn];
     UILabel *newLabel = [[UILabel alloc] initWithFrame:CGRectMake(81, 35, 30, 12)];
     newLabel.tag = LABEL_TAG_INDEX+1;

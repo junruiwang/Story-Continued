@@ -10,8 +10,12 @@
 #import "ContentListCell.h"
 #import "StoryListParser.h"
 #import "JBStory.h"
+#import "MJRefresh.h"
 
-@interface LatelyViewController ()
+@interface LatelyViewController ()<MJRefreshBaseViewDelegate>
+
+@property(nonatomic,strong) MJRefreshHeaderView *refreshHeaderView;
+@property(nonatomic,strong) MJRefreshFooterView *refreshFooterView;
 
 @property(nonatomic, strong) StoryListParser *storyListParser;
 @property(nonatomic,strong) NSMutableArray *storyList;
@@ -35,6 +39,15 @@
 {
     [super viewDidLoad];
     [self downloadData];
+    // 下拉刷新
+    self.refreshHeaderView = [[MJRefreshHeaderView alloc] init];
+    self.refreshHeaderView.delegate = self;
+    self.refreshHeaderView.scrollView = self.listTableView;
+    
+    // 上拉加载更多
+    self.refreshFooterView = [[MJRefreshFooterView alloc] init];
+    self.refreshFooterView.delegate = self;
+    self.refreshFooterView.scrollView = self.listTableView;
 	// Do any additional setup after loading the view.
 }
 
@@ -42,6 +55,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+#pragma mark 代理方法-进入刷新状态就会调用
+- (void)refreshViewBeginRefreshing:(MJRefreshBaseView *)refreshView
+{
+    [self downloadData];
 }
 
 - (void)downloadData
@@ -73,6 +92,9 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+    // 让刷新控件恢复默认的状态
+    [self.refreshHeaderView endRefreshing];
+    [self.refreshFooterView endRefreshing];
     return self.storyList.count;
 }
 
