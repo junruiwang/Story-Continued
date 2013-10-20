@@ -38,6 +38,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    if (IS_IOS7) {
+        [self resetTableSize];
+    }
     [self downloadData];
     // 下拉刷新
     self.refreshHeaderView = [[MJRefreshHeaderView alloc] init];
@@ -55,6 +58,12 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)resetTableSize
+{
+    CGRect rect = self.view.frame;
+    self.listTableView.frame = CGRectMake(rect.origin.x, self.navigationController.navigationBar.frame.size.height+23, rect.size.width, rect.size.height-self.navigationController.navigationBar.frame.size.height-49-30);
 }
 
 #pragma mark 代理方法-进入刷新状态就会调用

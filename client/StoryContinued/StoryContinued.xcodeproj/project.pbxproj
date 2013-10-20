@@ -87,6 +87,7 @@
 		C472338B180ADBE3002D0A18 /* navigation_bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4723389180ADBE3002D0A18 /* navigation_bg@2x.png */; };
 		C472338E180ADF6A002D0A18 /* CommonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C472338D180ADF6A002D0A18 /* CommonViewController.m */; };
 		C4723391180AE08A002D0A18 /* RecommendViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4723390180AE08A002D0A18 /* RecommendViewController.m */; };
+		C489573C18136D1D00A683CF /* StoryDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C489573B18136D1D00A683CF /* StoryDetailViewController.m */; };
 		C4BB38AC17D998F900600041 /* libGoogleAnalyticsServices.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38AB17D998F900600041 /* libGoogleAnalyticsServices.a */; };
 		C4BB38AE17D9993200600041 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38AD17D9993200600041 /* CoreData.framework */; };
 		C4BB38B017D9994F00600041 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38AF17D9994F00600041 /* SystemConfiguration.framework */; };
@@ -233,6 +234,8 @@
 		C472338D180ADF6A002D0A18 /* CommonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CommonViewController.m; path = Classes/CommonViewController.m; sourceTree = "<group>"; };
 		C472338F180AE08A002D0A18 /* RecommendViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RecommendViewController.h; path = Classes/RecommendViewController.h; sourceTree = "<group>"; };
 		C4723390180AE08A002D0A18 /* RecommendViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RecommendViewController.m; path = Classes/RecommendViewController.m; sourceTree = "<group>"; };
+		C489573A18136D1D00A683CF /* StoryDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StoryDetailViewController.h; path = Classes/StoryDetailViewController.h; sourceTree = "<group>"; };
+		C489573B18136D1D00A683CF /* StoryDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StoryDetailViewController.m; path = Classes/StoryDetailViewController.m; sourceTree = "<group>"; };
 		C4BB38A517D998F900600041 /* GAI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAI.h; sourceTree = "<group>"; };
 		C4BB38A617D998F900600041 /* GAIDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIDictionaryBuilder.h; sourceTree = "<group>"; };
 		C4BB38A717D998F900600041 /* GAIFields.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GAIFields.h; sourceTree = "<group>"; };
@@ -430,6 +433,7 @@
 		C4214EDE17D97592001E640A /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				C489573918136CB500A683CF /* Detail */,
 				C472336F180AD58A002D0A18 /* Main */,
 			);
 			name = Resource;
@@ -438,6 +442,7 @@
 		C4214EDF17D97648001E640A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C489573818136CA500A683CF /* Detail */,
 				C472336E180AC499002D0A18 /* Main */,
 				C4BB38B417D99ABA00600041 /* Common */,
 				C4214ECE17D97098001E640A /* AppDelegate.h */,
@@ -576,6 +581,22 @@
 				C406EB0D18129263006D6440 /* tabbar_tuijian_os7@2x.png */,
 			);
 			name = Main;
+			sourceTree = "<group>";
+		};
+		C489573818136CA500A683CF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				C489573A18136D1D00A683CF /* StoryDetailViewController.h */,
+				C489573B18136D1D00A683CF /* StoryDetailViewController.m */,
+			);
+			name = Detail;
+			sourceTree = "<group>";
+		};
+		C489573918136CB500A683CF /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Detail;
 			sourceTree = "<group>";
 		};
 		C4BB38A417D998F900600041 /* GoogleAnalytics_3.0 */ = {
@@ -865,6 +886,7 @@
 				C4F7528C18121D98005472D9 /* SingleCommonButton.m in Sources */,
 				C4F752C918126691005472D9 /* StoryListParser.m in Sources */,
 				C417FDAC181012C400F4439F /* PairCommonButton.m in Sources */,
+				C489573C18136D1D00A683CF /* StoryDetailViewController.m in Sources */,
 				C4F752B618125D5D005472D9 /* SBJsonStreamWriter.m in Sources */,
 				C4F752BB18125D5D005472D9 /* SBJsonWriter.m in Sources */,
 			);
