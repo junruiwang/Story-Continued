@@ -1,16 +1,16 @@
 //
-//  ContentListCell.m
+//  ContentCell.m
 //  StoryContinued
 //
-//  Created by jerry on 13-10-15.
+//  Created by jerry on 13-10-22.
 //
 //
 
-#import "ContentListCell.h"
+#import "ContentCell.h"
 #import "PairCommonButton.h"
 #import "SingleCommonButton.h"
 
-@implementation ContentListCell
+@implementation ContentCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier
 {
@@ -21,13 +21,16 @@
     return self;
 }
 
+- (void)setSelected:(BOOL)selected animated:(BOOL)animated
+{
+    [super setSelected:selected animated:animated];
+
+    // Configure the view for the selected state
+}
+
 - (void)layoutSubviews
 {
-    [super layoutSubviews]; 
-//    UITapGestureRecognizer *detailTap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showDetail)];
-//    [self.contentView addGestureRecognizer:detailTap];
-    
-    
+    [super layoutSubviews];    
     [self initPageViews];
 }
 
@@ -59,21 +62,6 @@
     shareButton.imageUrl = @"share_icon.png";
     shareButton.frame = CGRectMake(255, 0, 30, 30);
     [self.bottomView addSubview:shareButton];
-}
-
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated
-{
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
-}
-
-- (IBAction)contentButtonTap:(id)sender;
-{
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"信息提醒" message:@"你点击了我" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//    [alertView show];
-    if(self.delegate != nil && [self.delegate respondsToSelector:@selector(didTapRowContent:)])
-        [self.delegate didTapRowContent:nil];
 }
 
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "StoryDetailViewController.h"
+#import "ContentCell.h"
 
 @interface StoryDetailViewController ()
 
@@ -49,12 +50,21 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return nil;
+    ContentCell *cell = (ContentCell *)[tableView dequeueReusableCellWithIdentifier:@"ContentCellID"];
+    
+    if (cell == nil)
+    {
+        cell = [[ContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ContentCellID"];
+        
+    }
+    int row = [indexPath row];
+    cell.levelTag.text = [NSString stringWithFormat:@"#%d",row+1];
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 160;
+    return 219;
 }
 
 @end

@@ -195,11 +195,111 @@
                     <tabBarItem key="tabBarItem" title="" id="bJm-eb-cfo"/>
                     <connections>
                         <outlet property="listTableView" destination="EcC-EE-QyD" id="UDd-Eg-ccp"/>
+                        <segue destination="6DQ-RQ-iWN" kind="push" identifier="fromStoryListToDetail" id="ZBl-yp-2Po"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="y7c-06-keN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="419" y="313"/>
+        </scene>
+        <!--Story Detail View Controller-->
+        <scene sceneID="S2O-9T-kgr">
+            <objects>
+                <viewController storyboardIdentifier="StoryDetailViewController" id="6DQ-RQ-iWN" customClass="StoryDetailViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9I7-mL-Zsa">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="219" sectionHeaderHeight="22" sectionFooterHeight="22" id="gru-eQ-9Kj">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" restorationIdentifier="ContentCellID" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContentCellID" rowHeight="219" id="kEn-lS-Tsg" customClass="ContentCell">
+                                        <rect key="frame" x="0.0" y="86" width="320" height="219"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="kEn-lS-Tsg" id="FlT-gK-HgK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="219"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_box_top.png" id="Rf9-cf-MiG">
+                                                    <rect key="frame" x="0.0" y="5" width="320" height="5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_box_content.png" id="Lsf-Mg-Dhr">
+                                                    <rect key="frame" x="0.0" y="10" width="320" height="174"/>
+                                                    <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                                </imageView>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="list_box_bottom.png" id="nfD-G1-h74">
+                                                    <rect key="frame" x="0.0" y="183" width="320" height="35"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我们使用maven构建应用环境，因此我们先来简单介绍maven。Maven是什么？如何回答这个问题 要看你怎么看这个问题。我们使用maven构建应用环境，" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rPE-Vr-snF">
+                                                    <rect key="frame" x="15" y="45" width="291" height="133"/>
+                                                    <autoresizingMask key="autoresizingMask" heightSizable="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="member_pic.png" id="Xei-8V-QAG">
+                                                    <rect key="frame" x="14" y="11" width="25" height="25"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="顾狗蛋" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Zdo-T8-Bjd">
+                                                    <rect key="frame" x="46" y="7" width="134" height="18"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.53333336109999996" green="0.53333336109999996" blue="0.53333336109999996" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="09-04 10:30" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="yxs-L7-ppY">
+                                                    <rect key="frame" x="46" y="20" width="134" height="19"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" red="0.53333336109999996" green="0.53333336109999996" blue="0.53333336109999996" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="#1" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E2H-F0-H2H">
+                                                    <rect key="frame" x="238" y="14" width="63" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <color key="textColor" red="0.53333336109999996" green="0.53333336109999996" blue="0.53333336109999996" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" id="oxc-gv-0Me">
+                                                    <rect key="frame" x="9" y="186" width="302" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMinY="YES"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                </view>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="bottomView" destination="oxc-gv-0Me" id="ssK-N7-pub"/>
+                                            <outlet property="contentLabel" destination="rPE-Vr-snF" id="FFi-HE-ggF"/>
+                                            <outlet property="levelTag" destination="E2H-F0-H2H" id="ssK-jg-sZv"/>
+                                            <outlet property="memberIconView" destination="Xei-8V-QAG" id="fh7-IZ-tfL"/>
+                                            <outlet property="userName" destination="Zdo-T8-Bjd" id="l8M-46-jYw"/>
+                                            <outlet property="writeTime" destination="yxs-L7-ppY" id="gQJ-r0-1XF"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="6DQ-RQ-iWN" id="tIg-rt-laf"/>
+                                    <outlet property="delegate" destination="6DQ-RQ-iWN" id="oEU-Y3-282"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="fFA-Ma-Tp2"/>
+                    <connections>
+                        <outlet property="listTableView" destination="gru-eQ-9Kj" id="Nqe-jb-tcw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="keI-Dl-oTh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="889" y="313"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="zfV-Ih-vLn">

@@ -12,7 +12,7 @@
 #import "JBStory.h"
 #import "MJRefresh.h"
 
-@interface LatelyViewController ()<MJRefreshBaseViewDelegate>
+@interface LatelyViewController ()<MJRefreshBaseViewDelegate, ContentListCellDelegate>
 
 @property(nonatomic,strong) MJRefreshHeaderView *refreshHeaderView;
 @property(nonatomic,strong) MJRefreshFooterView *refreshFooterView;
@@ -110,12 +110,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     ContentListCell *cell = (ContentListCell *)[tableView dequeueReusableCellWithIdentifier:@"ContentListCellID"];
-    
     if (cell == nil)
     {
         cell = [[ContentListCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ContentListCellID"];
         
     }
+    cell.delegate = self;
     int row = [indexPath row];
     JBStory *story = [self.storyList objectAtIndex:row];
     cell.userName.text = story.userName;
@@ -133,5 +133,10 @@
     return 120+story.textHeight;
 }
 
+#pragma mark - ContentListCellDelegate
+- (void)didTapRowContent:(JBStory*)story
+{
+    [self performSegueWithIdentifier:@"fromStoryListToDetail" sender:nil];
+}
 
 @end

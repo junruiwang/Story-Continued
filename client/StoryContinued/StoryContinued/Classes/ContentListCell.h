@@ -7,9 +7,23 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JBStory.h"
+
+@class ContentListCell;
+
+#pragma mark - ContentListCellDelegate
+
+@protocol ContentListCellDelegate <NSObject>
+
+@optional
+
+- (void)didTapRowContent:(JBStory*)story;
+
+@end
 
 @interface ContentListCell : UITableViewCell
 
+@property (nonatomic, weak) id<ContentListCellDelegate> delegate;
 @property(nonatomic,weak) IBOutlet UIImageView *memberIconView;
 @property(nonatomic,weak) IBOutlet UILabel *userName;
 @property(nonatomic,weak) IBOutlet UILabel *writeTime;
