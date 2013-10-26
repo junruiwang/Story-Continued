@@ -21,8 +21,8 @@
 
 #define kClientVersionURL                 [kBaseURL stringByAppendingPathComponent:@"getClientVersion"]
 #define kStoryListSearchURL               [kBaseURL stringByAppendingPathComponent:@"/story/list"]
-#define kHotelPricePlanURL                [kBaseURL stringByAppendingPathComponent:@"hotels/room/newlist"]
-#define kHotelOverviewURL                 [kBaseURL stringByAppendingPathComponent:@"hotels/hotel"]
+#define kContentListSearchURL             [kBaseURL stringByAppendingPathComponent:@"/story/detail"]
+#define kNodeListURL                      [kBaseURL stringByAppendingPathComponent:@"/story/leaf/list"]
 #define kHotelRatingURL                   [kBaseURL stringByAppendingPathComponent:@"/lvping/rating"]
 #define kHotelPriceConfirmURL             [kBaseURL stringByAppendingPathComponent:@"hotels/room/getPriceTimeDpa"]
 #define kHotelOrderPlaceURL               [kBaseURL stringByAppendingPathComponent:@"hotels/order"]
