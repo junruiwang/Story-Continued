@@ -180,6 +180,13 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidUnload
+{
+    self.customTabView = nil;
+    
+    [super viewDidUnload];
+}
+
 - (void)tabbarItemClick:(id)sender
 {
     UIButton *but=sender;

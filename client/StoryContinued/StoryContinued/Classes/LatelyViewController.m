@@ -11,6 +11,7 @@
 #import "StoryListParser.h"
 #import "JBStory.h"
 #import "MJRefresh.h"
+#import "StoryDetailViewController.h"
 
 @interface LatelyViewController ()<MJRefreshBaseViewDelegate, ContentListCellDelegate>
 
@@ -20,6 +21,7 @@
 @property(nonatomic, strong) StoryListParser *storyListParser;
 @property(nonatomic,strong) NSMutableArray *storyList;
 @property(nonatomic) int currentPageIndex;
+@property(nonatomic,strong) JBStory *selectedStory;
 
 @end
 
@@ -58,6 +60,14 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidUnload
+{
+    [self.refreshHeaderView free];
+    [self.refreshFooterView free];
+    self.listTableView = nil;
+    [super viewDidUnload];
 }
 
 - (void)resetTableSize
@@ -118,11 +128,7 @@
     cell.delegate = self;
     int row = [indexPath row];
     JBStory *story = [self.storyList objectAtIndex:row];
-    cell.userName.text = story.userName;
-    cell.totalMember.text = [NSString stringWithFormat:@"%d人参与接龙",story.totalPartake];
-    cell.contentLabel.text = story.storyHeadContext;
-    cell.zanCount = story.totalLike;
-    cell.caiCount = story.totalDislike;
+    cell.story = story;
     return cell;
 }
 
@@ -136,7 +142,17 @@
 #pragma mark - ContentListCellDelegate
 - (void)didTapRowContent:(JBStory*)story
 {
-    [self performSegueWithIdentifier:@"fromStoryListToDetail" sender:nil];
+    self.selectedStory = story;
+    [self performSegueWithIdentifier:FROM_STORY_LIST_TO_DETAIL sender:nil];
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([segue.identifier isEqualToString:FROM_STORY_LIST_TO_DETAIL])
+    {
+        StoryDetailViewController *detailViewController = segue.destinationViewController;
+        detailViewController.story = self.selectedStory;
+    }
 }
 
 @end

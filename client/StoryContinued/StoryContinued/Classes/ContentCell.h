@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "JBContent.h"
 
 @interface ContentCell : UITableViewCell
 @property(nonatomic,weak) IBOutlet UIImageView *memberIconView;
@@ -15,7 +16,6 @@
 @property(nonatomic,weak) IBOutlet UILabel *levelTag;
 @property(nonatomic,weak) IBOutlet UILabel *contentLabel;
 @property(nonatomic,weak) IBOutlet UIView *bottomView;
-@property(nonatomic) int zanCount;
-@property(nonatomic) int caiCount;
+@property(nonatomic,strong) JBContent *content;
 
 @end

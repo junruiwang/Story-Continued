@@ -42,6 +42,7 @@
 		C4214ED217D97098001E640A /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = C4214ED117D97098001E640A /* Default.png */; };
 		C4214ED417D97098001E640A /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4214ED317D97098001E640A /* Default@2x.png */; };
 		C4214ED617D97098001E640A /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4214ED517D97098001E640A /* Default-568h@2x.png */; };
+		C4239417181CA66000E5AB22 /* LeafListParser.m in Sources */ = {isa = PBXBuildFile; fileRef = C4239416181CA66000E5AB22 /* LeafListParser.m */; };
 		C42F7792180D7987005278F7 /* LatelyViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C42F7791180D7987005278F7 /* LatelyViewController.m */; };
 		C42F7797180D7FB3005278F7 /* ContentListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C42F7796180D7FB3005278F7 /* ContentListCell.m */; };
 		C430A8A51816AACF00697F62 /* ContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = C430A8A41816AACF00697F62 /* ContentCell.m */; };
@@ -173,6 +174,8 @@
 		C4214ED117D97098001E640A /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		C4214ED317D97098001E640A /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		C4214ED517D97098001E640A /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		C4239415181CA66000E5AB22 /* LeafListParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LeafListParser.h; path = Classes/LeafListParser.h; sourceTree = "<group>"; };
+		C4239416181CA66000E5AB22 /* LeafListParser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LeafListParser.m; path = Classes/LeafListParser.m; sourceTree = "<group>"; };
 		C42F7790180D7987005278F7 /* LatelyViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LatelyViewController.h; path = Classes/LatelyViewController.h; sourceTree = "<group>"; };
 		C42F7791180D7987005278F7 /* LatelyViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LatelyViewController.m; path = Classes/LatelyViewController.m; sourceTree = "<group>"; };
 		C42F7795180D7FB3005278F7 /* ContentListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContentListCell.h; path = Classes/ContentListCell.h; sourceTree = "<group>"; };
@@ -525,6 +528,8 @@
 			children = (
 				C47280F5181BE3CD00F3DC57 /* StoryDetailParser.h */,
 				C47280F6181BE3CD00F3DC57 /* StoryDetailParser.m */,
+				C4239415181CA66000E5AB22 /* LeafListParser.h */,
+				C4239416181CA66000E5AB22 /* LeafListParser.m */,
 			);
 			name = Parser;
 			sourceTree = "<group>";
@@ -816,6 +821,7 @@
 			files = (
 				C47280EA181BA7D200F3DC57 /* LeafContentCell.m in Sources */,
 				C4214ECC17D97098001E640A /* main.m in Sources */,
+				C4239417181CA66000E5AB22 /* LeafListParser.m in Sources */,
 				C4F752B818125D5D005472D9 /* SBJsonStreamWriterState.m in Sources */,
 				C472336D180AC469002D0A18 /* IndexViewController.m in Sources */,
 				C406EB1D18129542006D6440 /* MJRefreshFooterView.m in Sources */,

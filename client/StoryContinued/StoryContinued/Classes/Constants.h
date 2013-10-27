@@ -45,4 +45,6 @@
 #define IS_IOS7 [[[UIDevice currentDevice] systemVersion] floatValue] >= 7
 #define RGBCOLOR(R,G,B) [UIColor colorWithRed:(float)R/255.0 green:(float)G/255.0 blue:(float)B/255.0 alpha:1]
 
+#define FROM_STORY_LIST_TO_DETAIL @"fromStoryListToDetail"
+
 #endif

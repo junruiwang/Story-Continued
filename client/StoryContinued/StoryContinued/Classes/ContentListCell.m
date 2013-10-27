@@ -26,8 +26,6 @@
     [super layoutSubviews]; 
 //    UITapGestureRecognizer *detailTap =[[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(showDetail)];
 //    [self.contentView addGestureRecognizer:detailTap];
-    
-    
     [self initPageViews];
 }
 
@@ -37,16 +35,27 @@
     for (UIView *view in views) {
         [view removeFromSuperview];
     }
+    NSURL* url = [NSURL URLWithString:self.story.iconUrl];
+    NSData* imgData = [NSData dataWithContentsOfURL:url];
+    UIImage *rectImage = [UIImage imageWithData:imgData];
+    if (rectImage == nil) {
+        rectImage = [UIImage imageNamed:@"member_pic.png"];
+    }
+    self.memberIconView.image = rectImage;
+    self.userName.text = self.story.userName;
+    self.totalMember.text = [NSString stringWithFormat:@"%d人参与接龙",self.story.totalPartake];
+    self.contentLabel.text = self.story.storyHeadContext;
+    self.writeTime.text = self.story.createTime;
     
     PairCommonButton *zhanButton = [PairCommonButton buttonWithType:UIButtonTypeCustom];
     zhanButton.imageUrl = @"zhan_icon.png";
-    zhanButton.totalNumber = self.zanCount;
+    zhanButton.totalNumber = self.story.totalLike;
     zhanButton.frame = CGRectMake(30, 0, 70, 30);
     [self.bottomView addSubview:zhanButton];
     
     PairCommonButton *caiButton = [PairCommonButton buttonWithType:UIButtonTypeCustom];
     caiButton.imageUrl = @"cai_icon.png";
-    caiButton.totalNumber = self.caiCount;
+    caiButton.totalNumber = self.story.totalDislike;
     caiButton.frame = CGRectMake(105, 0, 70, 30);
     [self.bottomView addSubview:caiButton];
     
@@ -70,10 +79,8 @@
 
 - (IBAction)contentButtonTap:(id)sender;
 {
-//    UIAlertView *alertView = [[UIAlertView alloc] initWithTitle:@"信息提醒" message:@"你点击了我" delegate:nil cancelButtonTitle:@"确定" otherButtonTitles:nil, nil];
-//    [alertView show];
     if(self.delegate != nil && [self.delegate respondsToSelector:@selector(didTapRowContent:)])
-        [self.delegate didTapRowContent:nil];
+        [self.delegate didTapRowContent:self.story];
 }
 
 @end

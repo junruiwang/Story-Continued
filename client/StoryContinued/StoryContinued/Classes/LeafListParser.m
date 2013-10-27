@@ -1,15 +1,15 @@
 //
-//  StoryDetailParser.m
+//  LeafListParser.m
 //  StoryContinued
 //
-//  Created by jerry on 13-10-26.
+//  Created by jerry on 13-10-27.
 //
 //
 
-#import "StoryDetailParser.h"
+#import "LeafListParser.h"
 #import "JBContent.h"
 
-@implementation StoryDetailParser
+@implementation LeafListParser
 
 - (BOOL)parserJSONString:(NSString *)responseData
 {

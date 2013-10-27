@@ -31,8 +31,7 @@
 @property(nonatomic,weak) IBOutlet UIButton *contentButton;
 @property(nonatomic,weak) IBOutlet UILabel *contentLabel;
 @property(nonatomic,weak) IBOutlet UIView *bottomView;
-@property(nonatomic) int zanCount;
-@property(nonatomic) int caiCount;
+@property(nonatomic,strong) JBStory *story;
 
 - (IBAction)contentButtonTap:(id)sender;
 
