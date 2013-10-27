@@ -10,7 +10,7 @@
 
 @interface JBContent : NSObject
 
-@property(nonatomic,copy) NSString *parentId;
+@property(nonatomic,copy) NSString *storyId;
 @property(nonatomic,copy) NSString *contentId;
 @property(nonatomic,copy) NSString *createTime;
 @property(nonatomic,copy) NSString *contentText;

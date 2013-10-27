@@ -13,7 +13,7 @@
 #import "LeafListParser.h"
 #import "JBContent.h"
 
-@interface StoryDetailViewController ()
+@interface StoryDetailViewController ()<LeafContentCellDelegate>
 
 @property(nonatomic,strong) UILabel *writeMessageLabel;
 
@@ -21,6 +21,7 @@
 @property(nonatomic,strong) StoryDetailParser *storyDetailParser;
 @property(nonatomic,strong) LeafListParser *leafListParser;
 @property(nonatomic,strong) NSMutableArray *contentList;
+@property(nonatomic,assign) NSInteger leafPageIndex;
 
 @end
 
@@ -139,6 +140,7 @@
         //存在叶子集,加入集合中
         if (leafArray && (leafArray.count > 0)) {
             [self.contentList addObject:leafArray];
+            self.leafPageIndex = 0;
         }
         //添加一行空数据，给 jielongButton 留出位置
         [self.contentList addObject:@""];
@@ -160,8 +162,16 @@
 {
     self.writeMessageLabel.text = [NSString stringWithFormat:@"故事还没完，接着#%d楼编吧...",self.lastContent.level];
     [UIView animateWithDuration:0.3 animations:^{
-        self.jielongButton.center = CGPointMake(self.jielongButton.center.x, self.jielongButton.center.y-50);
+        self.jielongButton.frame = CGRectMake(0, self.view.frame.size.height-50, self.view.frame.size.width, 50);
+        
     }];
+}
+
+#pragma mark - LeafContentCellDelegate
+- (void)didScrollRowContent:(NSInteger)pageIndex
+{
+    self.leafPageIndex = pageIndex;
+    [self.listTableView reloadData];
 }
 
 #pragma mark - UITableViewDataSource
@@ -176,11 +186,11 @@
     int row = [indexPath row];
     if ([self.contentList[row] isKindOfClass:[JBContent class]]) {
         JBContent *content = self.contentList[row];
+        content.storyId = self.story.storyId;
         ContentCell *cell = (ContentCell *)[tableView dequeueReusableCellWithIdentifier:@"ContentCellID"];
         if (cell == nil)
         {
             cell = [[ContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ContentCellID"];
-            
         }
         cell.content = content;
         return cell;
@@ -189,9 +199,12 @@
         if (cell == nil)
         {
             cell = [[LeafContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"LeafContentCellID"];
-            
         }
-        cell.topTitleLabel.text = @"大家来评比，好评度高即可晋升到#6楼";
+        cell.delegate = self;
+        cell.storyId = self.story.storyId;
+        cell.leafList = self.contentList[row];
+        cell.pageIndex = self.leafPageIndex;
+        cell.topTitleLabel.text = [NSString stringWithFormat:@"大家来评比，好评度高即可晋升到#%d楼",self.lastContent.level+1];
         return cell;
     } else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommonViewCellID"];
@@ -212,7 +225,9 @@
         JBContent *content = self.contentList[row];
         return 100 + content.textHeight;
     } else if ([self.contentList[row] isKindOfClass:[NSArray class]]) {
-        return 190;
+        NSArray *contentArray = self.contentList[row];
+        JBContent *content = contentArray[self.leafPageIndex];
+        return 120 + content.textHeight;
     } else {
         return 55;
     }
