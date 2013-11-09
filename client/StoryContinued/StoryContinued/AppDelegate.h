@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Constants.h"
 #import "UserInfo.h"
+#import "UMSocial.h"
+#import "WXApi.h"
+#import "UMSocialControllerService.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

@@ -18,6 +18,7 @@
 @optional
 
 - (void)didTapRowContent:(JBStory*)story;
+- (void)didShareButtonClicked:(NSString *)context;
 
 @end
 

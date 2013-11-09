@@ -39,6 +39,8 @@
 #define kClientVersion  @"1.0.0"
 // for signature
 #define kSecurityKey @"7e6bfbe8101e8925ad985407ebdb5afb"
+#define kUMengShareKey @"5278a8b156240bf578017d74"
+#define kWXShareKey @"wx29af9cb8693bcd02"
 
 #import "AppDelegate.h"
 #define TheAppDelegate  ((AppDelegate *)[UIApplication sharedApplication].delegate)

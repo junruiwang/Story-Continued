@@ -65,6 +65,7 @@
     [self.bottomView addSubview:likeButton];
     
     SingleCommonButton *shareButton = [SingleCommonButton buttonWithType:UIButtonTypeCustom];
+    [shareButton addTarget:self action:@selector(shareMessage:) forControlEvents:UIControlEventTouchUpInside];
     shareButton.imageUrl = @"share_icon.png";
     shareButton.frame = CGRectMake(255, 0, 30, 30);
     [self.bottomView addSubview:shareButton];
@@ -77,10 +78,16 @@
     // Configure the view for the selected state
 }
 
-- (IBAction)contentButtonTap:(id)sender;
+- (IBAction)contentButtonTap:(id)sender
 {
     if(self.delegate != nil && [self.delegate respondsToSelector:@selector(didTapRowContent:)])
         [self.delegate didTapRowContent:self.story];
+}
+
+- (void)shareMessage:(id)sender
+{
+    if(self.delegate != nil && [self.delegate respondsToSelector:@selector(didShareButtonClicked:)])
+        [self.delegate didShareButtonClicked:self.story.storyHeadContext];
 }
 
 @end

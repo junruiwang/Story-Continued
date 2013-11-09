@@ -12,6 +12,7 @@
 #import "JBStory.h"
 #import "MJRefresh.h"
 #import "StoryDetailViewController.h"
+#import "ShareToSNSManager.h"
 
 @interface LatelyViewController ()<MJRefreshBaseViewDelegate, ContentListCellDelegate>
 
@@ -144,6 +145,11 @@
 {
     self.selectedStory = story;
     [self performSegueWithIdentifier:FROM_STORY_LIST_TO_DETAIL sender:nil];
+}
+
+- (void)didShareButtonClicked:(NSString *)context
+{
+    [ShareToSNSManager shareWithList:self shareImage:[UIImage imageNamed:@"icon.png"] shareText:context];
 }
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender

@@ -15,6 +15,16 @@
     //初始化用户信息
     self.userInfo = [[UserInfo alloc] init];
     
+    //打开调试log的开关
+    [UMSocialData openLog:YES];
+    //设置友盟社会化组件appkey
+    [UMSocialData setAppKey:kUMengShareKey];
+    
+    //设置微信AppId
+    [UMSocialConfig setWXAppId:kWXShareKey url:nil];
+    //打开新浪微博的SSO开关
+    [UMSocialConfig setSupportSinaSSO:YES];
+    
     return YES;
 }
 
@@ -35,9 +45,20 @@
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
 }
 
+/**
+ 这里处理新浪微博SSO授权进入新浪微博客户端后进入后台，再返回原来应用
+ */
 - (void)applicationDidBecomeActive:(UIApplication *)application
 {
-    // Restart any tasks that were paused (or not yet started) while the application was inactive. If the application was previously in the background, optionally refresh the user interface.
+    [UMSocialSnsService  applicationDidBecomeActive];
+}
+
+/**
+ 这里处理新浪微博SSO授权之后跳转回来，和微信分享完成之后跳转回来
+ */
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    return  [UMSocialSnsService handleOpenURL:url wxApiDelegate:nil];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application

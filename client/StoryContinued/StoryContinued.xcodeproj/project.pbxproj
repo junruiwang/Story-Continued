@@ -122,11 +122,15 @@
 		C497CBF6182DF10900237A32 /* UIImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = C497CBE7182DF10900237A32 /* UIImage+WebP.m */; };
 		C497CBF7182DF10900237A32 /* UIImageView+WebCache.m in Sources */ = {isa = PBXBuildFile; fileRef = C497CBE9182DF10900237A32 /* UIImageView+WebCache.m */; };
 		C497CBF9182DF1D100237A32 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C497CBF8182DF1D100237A32 /* ImageIO.framework */; };
+		C4B8A78D182E4760001750E8 /* ShareToSNSManager.m in Sources */ = {isa = PBXBuildFile; fileRef = C4B8A78C182E4760001750E8 /* ShareToSNSManager.m */; };
+		C4B8A791182E583F001750E8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A78F182E583F001750E8 /* icon.png */; };
+		C4B8A792182E583F001750E8 /* icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = C4B8A790182E583F001750E8 /* icon@2x.png */; };
 		C4BB38AE17D9993200600041 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38AD17D9993200600041 /* CoreData.framework */; };
 		C4BB38B017D9994F00600041 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38AF17D9994F00600041 /* SystemConfiguration.framework */; };
 		C4BB38B217D9996400600041 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38B117D9996400600041 /* libz.dylib */; };
 		C4BB38B717D99B0E00600041 /* GDataXMLNode.m in Sources */ = {isa = PBXBuildFile; fileRef = C4BB38B617D99B0E00600041 /* GDataXMLNode.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		C4BB38BC17D99C2000600041 /* libxml2.2.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = C4BB38BB17D99C2000600041 /* libxml2.2.dylib */; };
+		C4E468BC182E8CCB006B0260 /* MemberCenterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = C4E468BB182E8CCB006B0260 /* MemberCenterViewController.m */; };
 		C4F7528C18121D98005472D9 /* SingleCommonButton.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7528B18121D98005472D9 /* SingleCommonButton.m */; };
 		C4F7529218124820005472D9 /* JBStory.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7529118124820005472D9 /* JBStory.m */; };
 		C4F7529518124A81005472D9 /* ValidateInputUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = C4F7529418124A81005472D9 /* ValidateInputUtil.m */; };
@@ -319,12 +323,18 @@
 		C497CBE8182DF10900237A32 /* UIImageView+WebCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+WebCache.h"; sourceTree = "<group>"; };
 		C497CBE9182DF10900237A32 /* UIImageView+WebCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+WebCache.m"; sourceTree = "<group>"; };
 		C497CBF8182DF1D100237A32 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		C4B8A78B182E4760001750E8 /* ShareToSNSManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ShareToSNSManager.h; path = Classes/ShareToSNSManager.h; sourceTree = "<group>"; };
+		C4B8A78C182E4760001750E8 /* ShareToSNSManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ShareToSNSManager.m; path = Classes/ShareToSNSManager.m; sourceTree = "<group>"; };
+		C4B8A78F182E583F001750E8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		C4B8A790182E583F001750E8 /* icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon@2x.png"; sourceTree = "<group>"; };
 		C4BB38AD17D9993200600041 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		C4BB38AF17D9994F00600041 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		C4BB38B117D9996400600041 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		C4BB38B517D99B0E00600041 /* GDataXMLNode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GDataXMLNode.h; path = Classes/GDataXMLNode.h; sourceTree = "<group>"; };
 		C4BB38B617D99B0E00600041 /* GDataXMLNode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GDataXMLNode.m; path = Classes/GDataXMLNode.m; sourceTree = "<group>"; };
 		C4BB38BB17D99C2000600041 /* libxml2.2.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libxml2.2.dylib; path = usr/lib/libxml2.2.dylib; sourceTree = SDKROOT; };
+		C4E468BA182E8CCB006B0260 /* MemberCenterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MemberCenterViewController.h; path = Classes/MemberCenterViewController.h; sourceTree = "<group>"; };
+		C4E468BB182E8CCB006B0260 /* MemberCenterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MemberCenterViewController.m; path = Classes/MemberCenterViewController.m; sourceTree = "<group>"; };
 		C4F7528A18121D98005472D9 /* SingleCommonButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SingleCommonButton.h; path = Classes/SingleCommonButton.h; sourceTree = "<group>"; };
 		C4F7528B18121D98005472D9 /* SingleCommonButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SingleCommonButton.m; path = Classes/SingleCommonButton.m; sourceTree = "<group>"; };
 		C4F7529018124820005472D9 /* JBStory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JBStory.h; path = Classes/JBStory.h; sourceTree = "<group>"; };
@@ -558,6 +568,8 @@
 				C4214ED117D97098001E640A /* Default.png */,
 				C4214ED317D97098001E640A /* Default@2x.png */,
 				C4214ED517D97098001E640A /* Default-568h@2x.png */,
+				C4B8A78F182E583F001750E8 /* icon.png */,
+				C4B8A790182E583F001750E8 /* icon@2x.png */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -586,6 +598,7 @@
 		C4214EDF17D97648001E640A /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				C4E468B9182E8C91006B0260 /* Member */,
 				C489573818136CA500A683CF /* Detail */,
 				C472336E180AC499002D0A18 /* Main */,
 				C4BB38B417D99ABA00600041 /* Common */,
@@ -771,8 +784,19 @@
 				C4F752BD18125E02005472D9 /* NSDataAES.m */,
 				C4F752BF18125EAB005472D9 /* CommonJsonParser.h */,
 				C4F752C018125EAB005472D9 /* CommonJsonParser.m */,
+				C4B8A78B182E4760001750E8 /* ShareToSNSManager.h */,
+				C4B8A78C182E4760001750E8 /* ShareToSNSManager.m */,
 			);
 			name = Common;
+			sourceTree = "<group>";
+		};
+		C4E468B9182E8C91006B0260 /* Member */ = {
+			isa = PBXGroup;
+			children = (
+				C4E468BA182E8CCB006B0260 /* MemberCenterViewController.h */,
+				C4E468BB182E8CCB006B0260 /* MemberCenterViewController.m */,
+			);
+			name = Member;
 			sourceTree = "<group>";
 		};
 		C4F7528F1812479E005472D9 /* Model */ = {
@@ -896,6 +920,7 @@
 				C411DDA8182DF95F002D2D52 /* UMShareEditViewControlleriPad.xib in Resources */,
 				C4458CFB180C3C6A0051E05D /* navigationbar_refresh_os7@2x.png in Resources */,
 				C4458D0B180C3E6A0051E05D /* tabbar_discover_selected_os7@2x.png in Resources */,
+				C4B8A792182E583F001750E8 /* icon@2x.png in Resources */,
 				C411DDAA182DF95F002D2D52 /* UMSnsAccountViewController.xib in Resources */,
 				C4458D17180C3E6A0051E05D /* tabbar_profile_selected_os7@2x.png in Resources */,
 				C4458CF9180C3C6A0051E05D /* navigationbar_compose_os7@2x.png in Resources */,
@@ -946,6 +971,7 @@
 				C4458CF8180C3C6A0051E05D /* navigationbar_compose_highlighted_os7@2x.png in Resources */,
 				C47280E3181B745A00F3DC57 /* content_box_top_ios7@2x.png in Resources */,
 				C46FA18C17D9A936003EFB2F /* MainStoryboard.storyboard in Resources */,
+				C4B8A791182E583F001750E8 /* icon.png in Resources */,
 				C47280DE181B745A00F3DC57 /* bottom_jielong_bg_ios7.png in Resources */,
 				C406EB1118129263006D6440 /* tabbar_tuijian_os7@2x.png in Resources */,
 				C47280E7181B84B300F3DC57 /* content_box_center_ios7@2x.png in Resources */,
@@ -992,6 +1018,7 @@
 				C42F7792180D7987005278F7 /* LatelyViewController.m in Sources */,
 				C4F752BA18125D5D005472D9 /* SBJsonUTF8Stream.m in Sources */,
 				C497CBF5182DF10900237A32 /* UIImage+MultiFormat.m in Sources */,
+				C4E468BC182E8CCB006B0260 /* MemberCenterViewController.m in Sources */,
 				C497CBEE182DF10900237A32 /* SDWebImageDecoder.m in Sources */,
 				C4F752C5181264D2005472D9 /* UserInfo.m in Sources */,
 				C472338E180ADF6A002D0A18 /* CommonViewController.m in Sources */,
@@ -1006,6 +1033,7 @@
 				C489573C18136D1D00A683CF /* StoryDetailViewController.m in Sources */,
 				C497CBF4182DF10900237A32 /* UIImage+GIF.m in Sources */,
 				C4F752B618125D5D005472D9 /* SBJsonStreamWriter.m in Sources */,
+				C4B8A78D182E4760001750E8 /* ShareToSNSManager.m in Sources */,
 				C4F752BB18125D5D005472D9 /* SBJsonWriter.m in Sources */,
 				C47280F7181BE3CD00F3DC57 /* StoryDetailParser.m in Sources */,
 				C497CBED182DF10900237A32 /* SDWebImageCompat.m in Sources */,

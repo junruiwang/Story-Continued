@@ -378,10 +378,10 @@
             </objects>
             <point key="canvasLocation" x="889" y="313"/>
         </scene>
-        <!--View Controller-->
+        <!--Member Center View Controller-->
         <scene sceneID="zfV-Ih-vLn">
             <objects>
-                <viewController id="j86-F7-7dR" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MemberCenterViewController" id="j86-F7-7dR" customClass="MemberCenterViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bvb-b5-ikY">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
