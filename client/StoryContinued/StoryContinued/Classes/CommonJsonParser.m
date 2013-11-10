@@ -27,7 +27,7 @@
     [self.requestData resetBytesInRange:NSMakeRange(0, [self.requestData length])];
     [self.requestData setLength:0];
     
-    NSString *uid = TheAppDelegate.userInfo.usid;
+    NSString *uid = TheAppDelegate.userInfo.uid;
     NSString *httpBodyString = @"";
     if (self.requestString !=nil && ![self.requestString isEqualToString:@""])
     {

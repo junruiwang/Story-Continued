@@ -57,6 +57,44 @@
 	// Do any additional setup after loading the view.
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    [self generateBarButton];
+}
+
+- (void)generateBarButton
+{
+    //add left button
+    UIButton* leftBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [leftBtn setImage:[UIImage imageNamed:@"navigationbar_compose_os7"] forState:UIControlStateNormal];
+    [leftBtn setImage:[UIImage imageNamed:@"navigationbar_compose_highlighted_os7"] forState:UIControlStateHighlighted];
+    [leftBtn addTarget:self action:@selector(publishEssay) forControlEvents:UIControlEventTouchUpInside];
+    leftBtn.frame = CGRectMake(10, 5, 30, 30);
+    self.parentViewController.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:leftBtn];
+    //    [self.navigationController.navigationBar addSubview:leftBtn];
+    //add right button
+    UIButton* rightBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [rightBtn setImage:[UIImage imageNamed:@"navigationbar_refresh_os7"] forState:UIControlStateNormal];
+    [rightBtn setImage:[UIImage imageNamed:@"navigationbar_refresh_highlighted_os7"] forState:UIControlStateHighlighted];
+    [rightBtn addTarget:self action:@selector(refreshTableView) forControlEvents:UIControlEventTouchUpInside];
+    rightBtn.frame = CGRectMake(self.view.frame.size.width-40, 5, 30, 30);
+    //    [self.navigationController.navigationBar addSubview:rightBtn];
+    self.parentViewController.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithCustomView:rightBtn];
+}
+
+//发表段子
+- (void)publishEssay
+{
+    
+}
+
+//刷新视图
+- (void)refreshTableView
+{
+    NSLog(@"TableView already refreshed!");
+}
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];

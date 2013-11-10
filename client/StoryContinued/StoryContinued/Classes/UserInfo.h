@@ -21,14 +21,19 @@
 @property (nonatomic, copy) NSString *userName;
 
 /**
- 用户在微博的id号
+ 用户的唯一id号
  */
-@property (nonatomic, copy) NSString *usid;
+@property (nonatomic, copy) NSString *uid;
 
 /**
  用户微博头像的url
  */
 @property (nonatomic, copy) NSString *iconURL;
+
+/**
+ 用户性别
+ */
+@property (nonatomic, copy) NSString *gender;
 
 /**
  用户授权后得到的accessToken
@@ -44,5 +49,12 @@
  是否首次授权，sdk内使用
  */
 @property (nonatomic) BOOL isFirstOauth;
+
+/**
+ 把各属性编码成NSString
+ 
+ @return 一个`NSString`对象
+ */
+- (NSString *)description;
 
 @end

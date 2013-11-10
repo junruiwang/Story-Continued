@@ -14,9 +14,15 @@
 {
     if (self = [super init])
     {
-        _usid = @"0";
+        _uid = @"0";
     }
     return self;
+}
+
+- (NSString *)description
+{
+    NSString *desc = [NSString stringWithFormat:@"平台：%@，昵称：%@，会员ID：%@，会员头像：%@，微博网址：%@，会员性别：%@。",self.platformName,self.userName,self.uid,self.iconURL,self.profileURL,self.gender];
+    return desc;
 }
 
 @end
