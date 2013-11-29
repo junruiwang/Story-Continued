@@ -1127,7 +1127,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/jerry/development/Story-Continued/client/StoryContinued/StoryContinued/Libraries/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI",
+					"\"$(SRCROOT)/StoryContinued/Libraries/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoryContinued/StoryContinued-Prefix.pch";
@@ -1136,9 +1136,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/jerry/development/Story-Continued/client/StoryContinued/StoryContinued/Libraries/GoogleAnalytics",
-					"/Users/jerry/development/Story-Continued/client/StoryContinued/StoryContinued/Libraries/UMSocial_Sdk_3.1/frameworks/Wechat",
-					"/Users/jerry/development/Story-Continued/client/StoryContinued/StoryContinued/Libraries/UMSocial_Sdk_3.1",
+					"\"$(SRCROOT)/StoryContinued/Libraries/GoogleAnalytics\"",
+					"\"$(SRCROOT)/StoryContinued/Libraries/UMSocial_Sdk_3.1/frameworks/Wechat\"",
+					"\"$(SRCROOT)/StoryContinued/Libraries/UMSocial_Sdk_3.1\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "接吧";
@@ -1151,7 +1151,7 @@
 			buildSettings = {
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/jerry/development/Story-Continued/client/StoryContinued/StoryContinued/Libraries/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI",
+					"\"$(SRCROOT)/StoryContinued/Libraries/UMSocial_Sdk_3.1/frameworks/TencentOpenAPI\"",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "StoryContinued/StoryContinued-Prefix.pch";
@@ -1160,9 +1160,9 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
-					"/Users/jerry/development/Story-Continued/client/StoryContinued/StoryContinued/Libraries/GoogleAnalytics",
-					"/Users/jerry/development/Story-Continued/client/StoryContinued/StoryContinued/Libraries/UMSocial_Sdk_3.1/frameworks/Wechat",
-					"/Users/jerry/development/Story-Continued/client/StoryContinued/StoryContinued/Libraries/UMSocial_Sdk_3.1",
+					"\"$(SRCROOT)/StoryContinued/Libraries/GoogleAnalytics\"",
+					"\"$(SRCROOT)/StoryContinued/Libraries/UMSocial_Sdk_3.1/frameworks/Wechat\"",
+					"\"$(SRCROOT)/StoryContinued/Libraries/UMSocial_Sdk_3.1\"",
 				);
 				OTHER_LDFLAGS = "";
 				PRODUCT_NAME = "接吧";
