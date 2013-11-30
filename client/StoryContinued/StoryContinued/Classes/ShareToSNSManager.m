@@ -26,7 +26,7 @@
 {
     //设置微信图文分享
     [UMSocialData defaultData].extConfig.wxMessageType = UMSocialWXMessageTypeApp;
-    [UMSocialData defaultData].extConfig.title = @"哎妈，好经典的段子";
+    [UMSocialData defaultData].extConfig.title = @"艾玛，好经典的段子";
     //如果得到分享完成回调，需要传递delegate参数
     [UMSocialSnsService presentSnsIconSheetView:controller appKey:kUMengShareKey shareText:shareText shareImage:shareImage shareToSnsNames:[UMSocialSnsPlatformManager sharedInstance].allSnsValuesArray delegate:nil];
 }

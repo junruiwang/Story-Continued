@@ -15,7 +15,7 @@
 @property(nonatomic,weak) IBOutlet UILabel *writeTime;
 @property(nonatomic,weak) IBOutlet UILabel *levelTag;
 @property(nonatomic,weak) IBOutlet UILabel *contentLabel;
-@property(nonatomic,weak) IBOutlet UIView *bottomView;
 @property(nonatomic,strong) JBContent *content;
+@property(nonatomic,strong) IBOutlet UIImageView *dashedImageView;
 
 @end

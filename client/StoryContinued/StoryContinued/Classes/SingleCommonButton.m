@@ -27,7 +27,7 @@
 
 - (void)loadPageContent
 {
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 5, 18, 18)];
+    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 5, 15, 15)];
     imageView.image = [UIImage imageNamed:self.imageUrl];
     [self addSubview:imageView];
 }

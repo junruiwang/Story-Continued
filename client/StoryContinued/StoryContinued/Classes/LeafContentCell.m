@@ -51,6 +51,9 @@
     self.contentScrollView.showsHorizontalScrollIndicator = NO;
     self.contentScrollView.showsVerticalScrollIndicator = NO;
     
+    JBContent *jbContent = self.leafList[self.pageIndex];
+    CGFloat heightY =  120 + jbContent.textHeight;
+    
     for (int i=0; i<self.leafList.count; i++) {
         JBContent *content = self.leafList[i];
         UIView *leafView = [[UIView alloc] initWithFrame:[self getRectByPageNumber:i andViewWidth:rect]];
@@ -62,7 +65,20 @@
         textLabel.font = [UIFont systemFontOfSize:17];
         textLabel.lineBreakMode = NSLineBreakByWordWrapping;
         textLabel.numberOfLines = 0;
-        textLabel.text = content.contentText;
+        CGFloat currentY = 120 + content.textHeight;
+        //大于展示行高度
+        if (currentY > heightY) {
+            NSString *displayContext = [content.contentText substringToIndex:63];
+            textLabel.text = [NSString stringWithFormat:@"%@...",displayContext];
+            UIButton *moreButton = [UIButton buttonWithType:UIButtonTypeCustom];
+            moreButton.frame = CGRectMake(230, 72, 56, 20);
+            [moreButton setImage:[UIImage imageNamed:@"btn_more.png"] forState:UIControlStateNormal];
+            [moreButton addTarget:self action:@selector(readAllContent:) forControlEvents:UIControlEventTouchUpInside];
+            [leafView addSubview:moreButton];
+        } else {
+            textLabel.text = content.contentText;
+        }
+        
         [leafView addSubview:textLabel];
         
         UIView *tagView = [[UIView alloc] initWithFrame:CGRectMake(0, rect.size.height-40, rect.size.width, 40)];
@@ -87,7 +103,7 @@
         
         UILabel *createTime = [[UILabel alloc] initWithFrame:CGRectMake(37, 17, 134, 19)];
         createTime.backgroundColor = [UIColor clearColor];
-        createTime.textColor = RGBCOLOR(136, 136, 136);
+        createTime.textColor = RGBCOLOR(187, 187, 187);
         createTime.font = [UIFont systemFontOfSize:10];
         createTime.text = content.createTime;
         [tagView addSubview:createTime];
@@ -95,13 +111,13 @@
         PairCommonButton *zhanButton = [PairCommonButton buttonWithType:UIButtonTypeCustom];
         zhanButton.imageUrl = @"zhan_icon.png";
         zhanButton.totalNumber = content.like;
-        zhanButton.frame = CGRectMake(150, 10, 70, 30);
+        zhanButton.frame = CGRectMake(170, 10, 60, 30);
         [tagView addSubview:zhanButton];
         
         PairCommonButton *caiButton = [PairCommonButton buttonWithType:UIButtonTypeCustom];
         caiButton.imageUrl = @"cai_icon.png";
         caiButton.totalNumber = content.dislike;
-        caiButton.frame = CGRectMake(230, 10, 70, 30);
+        caiButton.frame = CGRectMake(240, 10, 60, 30);
         [tagView addSubview:caiButton];
         
         [leafView addSubview:tagView];
@@ -121,13 +137,16 @@
     return CGRectMake(num * rect.size.width, 0, rect.size.width, rect.size.height);
 }
 
+- (void)readAllContent:(id)sender
+{
+    if(self.delegate != nil && [self.delegate respondsToSelector:@selector(didScrollRowContent:)])
+        [self.delegate didScrollRowContent:self.pageIndex];
+}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     int location=((int)self.contentScrollView.contentOffset.x)/((int)self.contentScrollView.frame.size.width);
     self.pageIndex = location;
-    if(self.delegate != nil && [self.delegate respondsToSelector:@selector(didScrollRowContent:)])
-        [self.delegate didScrollRowContent:location];
 }
 
 @end

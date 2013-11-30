@@ -50,24 +50,28 @@
     PairCommonButton *zhanButton = [PairCommonButton buttonWithType:UIButtonTypeCustom];
     zhanButton.imageUrl = @"zhan_icon.png";
     zhanButton.totalNumber = self.story.totalLike;
-    zhanButton.frame = CGRectMake(30, 0, 70, 30);
+    zhanButton.frame = CGRectMake(15, 2, 60, 30);
     [self.bottomView addSubview:zhanButton];
     
     PairCommonButton *caiButton = [PairCommonButton buttonWithType:UIButtonTypeCustom];
     caiButton.imageUrl = @"cai_icon.png";
     caiButton.totalNumber = self.story.totalDislike;
-    caiButton.frame = CGRectMake(105, 0, 70, 30);
+    caiButton.frame = CGRectMake(90, 2, 60, 30);
     [self.bottomView addSubview:caiButton];
     
     SingleCommonButton *likeButton = [SingleCommonButton buttonWithType:UIButtonTypeCustom];
     likeButton.imageUrl = @"like_icon.png";
-    likeButton.frame = CGRectMake(180, 0, 30, 30);
+    likeButton.frame = CGRectMake(165, 2, 20, 20);
     [self.bottomView addSubview:likeButton];
+    
+    UIImageView *seplitLine = [[UIImageView alloc] initWithFrame:CGRectMake(220, 8, 1, 15)];
+    seplitLine.backgroundColor = RGBCOLOR(187, 187, 187);
+    [self.bottomView addSubview:seplitLine];
     
     SingleCommonButton *shareButton = [SingleCommonButton buttonWithType:UIButtonTypeCustom];
     [shareButton addTarget:self action:@selector(shareMessage:) forControlEvents:UIControlEventTouchUpInside];
     shareButton.imageUrl = @"share_icon.png";
-    shareButton.frame = CGRectMake(255, 0, 30, 30);
+    shareButton.frame = CGRectMake(260, 2, 20, 20);
     [self.bottomView addSubview:shareButton];
 }
 

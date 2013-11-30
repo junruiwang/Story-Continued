@@ -39,9 +39,20 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    [self resetTableSize];
     [self buildJieLongButton];
     [self downloadData];
 	// Do any additional setup after loading the view.
+}
+
+- (void)resetTableSize
+{
+    CGRect rect = self.listTableView.frame;
+    self.listTableView.frame = CGRectMake(rect.origin.x, rect.origin.y+8, rect.size.width, rect.size.height-8);
+    UIImageView *topLineView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 320, 1)];
+    topLineView.backgroundColor = [UIColor clearColor];
+    topLineView.image = [UIImage imageNamed:@"box_top_line.png"];
+    [self.listTableView addSubview:topLineView];
 }
 
 - (void)didReceiveMemoryWarning
@@ -91,11 +102,11 @@
     [self.jielongButton setBackgroundImage:[UIImage imageNamed:@"bottom_jielong_bg_ios7.png"] forState:UIControlStateNormal];
     
     UIImageView *writeImageView = [[UIImageView alloc] initWithFrame:CGRectMake(36, 12, 30, 30)];
-    writeImageView.image = [UIImage imageNamed:@"write_bottom.png"];
+    writeImageView.image = [UIImage imageNamed:@"icon_story_write.png"];
     [self.jielongButton addSubview:writeImageView];
     self.writeMessageLabel = [[UILabel alloc] initWithFrame:CGRectMake(74, 16, 211, 21)];
     self.writeMessageLabel.backgroundColor = [UIColor clearColor];
-    self.writeMessageLabel.textColor = RGBCOLOR(129, 129, 129);
+    self.writeMessageLabel.textColor = RGBCOLOR(243, 152, 46);
     self.writeMessageLabel.font = [UIFont systemFontOfSize:15];
     [self.jielongButton addSubview:self.writeMessageLabel];
     [self.view addSubview:self.jielongButton];
@@ -192,6 +203,12 @@
         {
             cell = [[ContentCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"ContentCellID"];
         }
+        cell.dashedImageView.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:@"dashed_detail.png"]];
+        if (row == (self.contentList.count-1)) {
+            cell.dashedImageView.backgroundColor = RGBCOLOR(203, 203, 203);
+        } else if ([self.contentList[row+1] isKindOfClass:[NSArray class]]) {
+            cell.dashedImageView.backgroundColor = RGBCOLOR(203, 203, 203);
+        }
         cell.content = content;
         return cell;
     } else if ([self.contentList[row] isKindOfClass:[NSArray class]]) {
@@ -204,7 +221,7 @@
         cell.storyId = self.story.storyId;
         cell.leafList = self.contentList[row];
         cell.pageIndex = self.leafPageIndex;
-        cell.topTitleLabel.text = [NSString stringWithFormat:@"大家来评比，好评度高即可晋升到#%d楼",self.lastContent.level+1];
+        cell.topTitleLabel.text = [NSString stringWithFormat:@"大家来评比，支持率高即可晋升到【%d楼】",self.lastContent.level+1];
         return cell;
     } else {
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"CommonViewCellID"];
@@ -223,7 +240,7 @@
     int row = [indexPath row];
     if ([self.contentList[row] isKindOfClass:[JBContent class]]) {
         JBContent *content = self.contentList[row];
-        return 100 + content.textHeight;
+        return 50 + content.textHeight;
     } else if ([self.contentList[row] isKindOfClass:[NSArray class]]) {
         NSArray *contentArray = self.contentList[row];
         JBContent *content = contentArray[self.leafPageIndex];
